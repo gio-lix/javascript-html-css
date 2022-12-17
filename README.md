@@ -1,6 +1,6 @@
-## _The Markdown Of Card_
+## _The Markdown Of Cards_
 
-[![Build Status](https://res.cloudinary.com/dlbipxxlr/image/upload/v1671272535/gitHub-repository-images/cards-01_gpuxch.png)](https://javascript-html-css.vercel.app/)
+[![Build Status](https://res.cloudinary.com/dlbipxxlr/image/upload/v1671272682/gitHub-repository-images/cards-2_qf3jum.png)](https://javascript-html-css.vercel.app/)
 
 ## Features
 - Html
