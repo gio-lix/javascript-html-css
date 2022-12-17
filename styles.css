@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120vh;
+}
+
+.container {
+    margin-top: 0;
+    position: relative;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    row-gap: 50px;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.container .box {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    background-color: #000;
+    transition: all .5s ease-in-out;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+.container:hover .box {
+    transform: rotateY(25deg);
+}
+.container:hover .box {
+    transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+    transform: rotateY(-25deg);
+}
+
+.container .box:hover {
+    transform: rotateY(0deg) scale(1.25);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0,0,0, 0.5);
+}
+.container .box:hover ~ .box {
+    transform: rotateY(-25deg);
+}
+
+
+
+.container .box .image-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .box .image-box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*backdrop-filter: blur(2px);*/
+    background: linear-gradient(180deg, #ff0014, #602049);
+    z-index: 1;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    mix-blend-mode: multiply;
+
+}
+.container .box:hover .image-box:before {
+    opacity: 1;
+}
+.container .box .image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+.container .box .content h2 {
+    color: #fff;
+    transition: all .5s ease-in-out;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    transform: translateY(200px);
+}
+.container .box:hover .content h2 {
+    transform: translateY(0px);
+    transition-delay: .4s;
+}
+
+
+.container .box .content p {
+    color: #fff;
+    transition: all .5s ease-in-out;
+    font-size: 10px;
+    transform: translateY(200px);
+}
+.container .box:hover .content p {
+    transform: translateY(0px);
+    transition-delay: .2s;
+}
