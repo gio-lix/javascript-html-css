@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+i {
+    color: greenyellow;
+    font-size: 52px!important;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #434149;
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    flex-wrap: wrap;
+}
+
+
+.container .card {
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #4a5b73;
+    overflow: hidden;
+}
+
+.container .card::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    right: -30%;
+    width: 200px;
+    height: 200px;
+    background-color: #7cb721;
+    clip-path: circle(50%);
+    transition: all .2s ease-in-out;
+
+}
+.container .card.active::before {
+    width: 600px;
+    height: 200%;
+    background-color: #4c6524;
+}
+
+
+.container .card .icon {
+    margin-bottom: 10px;
+}
+.container .card .icon i {
+    max-width: 90px;
+}
+.container .card .content::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, #4a5b73);
+}
+.container .card.active .content::before {
+    display: none;
+}
+
+.container .card .content {
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+}
+
+.container .card.active .content {
+    height: auto;
+}
+
+.container .card .content h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.container .card .content p {
+    font-weight: 300;
+    color: #ccc;
+}
+.container .card.active .content p {
+    color: #ebebec;
+}
+
+.container .card .more {
+    position: relative;
+    padding: 10px 15px;
+    background-color: #6eb700;
+    margin-top: 15px;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+.container .card.active .more {
+    background-color: #ab0572;
+    color: white!important;
+}
+.container .card .more::before {
+    content: "Read More";
+}
+.container .card.active .more::before {
+    content: "Read Less";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

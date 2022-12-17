@@ -5,10 +5,84 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-
+<div class="container">
+    <div class="card">
+        <div class="icon">
+            <i class="material-icons">
+                devices_fold
+            </i>
+        </div>
+        <div class="content">
+            <h3>Web Mobile Development</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam beatae commodi corporis
+                distinctio eaque eligendi id, illum itaque, libero modi natus nesciunt obcaecati odio quibusdam quo quos
+                sapiente sunt vitae, voluptates. Aliquid assumenda eos ipsum itaque maiores nam, odit pariatur provident
+                quae quam, quasi qui? A atque beatae culpa dicta dolore, eligendi eos explicabo facilis hic, libero
+                molestias perspiciatis, provident quaerat quasi quidem sint sunt tempora totam vero voluptatem?
+            </p>
+        </div>
+        <a class="more"></a>
+    </div>
+    <div class="card">
+        <div class="icon">
+            <i class="material-icons ">
+                woman
+            </i>
+        </div>
+        <div class="content">
+            <h3>Web Mobile Development</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur dicta et explicabo fugiat in
+                iste magnam magni mollitia perferendis porro sequi, unde vitae. Accusantium adipisci asperiores
+                consequatur consequuntur dicta dolorum eveniet ipsa ipsam magnam minima nemo nihil, provident quaerat
+                quas saepe velit veniam vero? A laudantium maxime minus repellat.</p>
+        </div>
+        <a class="more"></a>
+    </div>
+    <div class="card">
+        <div class="icon">
+            <i class="material-icons">
+                campaign
+            </i>
+        </div>
+        <div class="content">
+            <h3>Web Mobile Development</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur dicta et explicabo fugiat in
+                iste magnam magni mollitia perferendis porro sequi, unde vitae. Accusantium adipisci asperiores
+                consequatur consequuntur dicta dolorum eveniet ipsa ipsam magnam minima nemo nihil, provident quaerat
+                quas saepe velit veniam vero? A laudantium maxime minus repellat.</p>
+        </div>
+        <a class="more"></a>
+    </div>
+    <div class="card">
+        <div class="icon">
+            <i class="material-icons">
+                campaign
+            </i>
+        </div>
+        <div class="content">
+            <h3>Web Mobile Development</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur dicta et explicabo fugiat in
+                iste magnam magni mollitia perferendis porro sequi, unde vitae. Accusantium adipisci asperiores
+                consequatur consequuntur dicta dolorum eveniet ipsa ipsam magnam minima nemo nihil, provident quaerat
+                quas saepe velit veniam vero? A laudantium maxime minus repellat.</p>
+        </div>
+        <a class="more"></a>
+    </div>
+</div>
+<script>
+    let more = document.querySelectorAll(".more")
+    for (let i = 0; i < more.length; i++) {
+        more[i].addEventListener("click", () => {
+            more[i].parentNode.classList.toggle('active')
+        })
+    }
+</script>
 </body>
 </html>
