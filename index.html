@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Side Bar</title>
+</head>
+<body>
+    <div class="navigate">
+        <div class="menu_toggle"></div>
+        <ul>
+            <li class="list active " style="--clr:#f44336">
+                <a href="#">
+                    <span class="icon">
+                        <i class="material-icons">
+                           add_home_work
+                        </i>
+                    </span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#8cf436">
+                <a href="#">
+                    <span class="icon">
+                        <i class="material-icons">
+                            roundabout_right
+                        </i>
+                    </span>
+                    <span class="text">About</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#5856ad">
+                <a href="#">
+                    <span class="icon">
+                        <i class="material-icons">
+                              forum
+                        </i>
+                    </span>
+                    <span class="text">Messages</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#ff5ec7">
+                <a href="#">
+                    <span class="icon">
+                        <i class="material-icons">
+                             photo_library
+                        </i>
+                    </span>
+                    <span class="text">Photos</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#737700">
+                <a href="#">
+                    <span class="icon">
+                        <i class="material-icons">
+                           settings_suggest
+                        </i>
+                    </span>
+                    <span class="text">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const toggle = document.querySelector('.menu_toggle')
+        const navigate = document.querySelector('.navigate')
+        const list = document.querySelectorAll(".list")
+
+        toggle.onclick = () => {
+            navigate.classList.toggle("open")
+        }
+
+        list.forEach(item => {
+            item.addEventListener("click",activeLink)
+        })
+        function activeLink() {
+            list.forEach((item) => {
+                item.classList.remove("active")
+                this.classList.add("active")
+            })
+        }
+
+
+    </script>
+</body>
+</html>
