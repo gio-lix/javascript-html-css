@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+    transition: .5s;
+}
+.dark_mode {
+    background: #222;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.05);
+    transition: .5s;
+}
+
+.dark_mode .box {
+    background: #292929;
+}
+
+.menu {
+    position: relative;
+}
+.menu li {
+    list-style: none;
+    margin: 8px 0;
+}
+.menu li label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li label span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    color: #777;
+}
+.dark_mode .menu li label span {
+    color: #fcf2e0;
+}
+.menu li label span ion-icon {
+    margin-right: 10px;
+}
+
+
+.menu li label .action {
+    position: relative;
+}
+
+.menu li label .action input {
+    appearance: none;
+}
+.menu li label .action i {
+    position: relative;
+    width: 30px;
+    height: 15px;
+    background: #ddd;
+    border-radius: 15px;
+}
+
+
+.menu li label .action input:checked ~ i {
+    background: #54aef8;
+}
+.menu li label .action i::before {
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    left: 2.2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: .3s;
+}
+
+.dark_mode .menu li label .action i {
+    background: #6e7172;
+}
+.menu li label .action input:checked ~  i::before {
+    left: calc(100% - 12.5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
