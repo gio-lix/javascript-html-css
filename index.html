@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Check Box</title>
+</head>
+<body>
+    <div class="box">
+        <ul class="menu">
+            <li>
+                <label>
+                    <span class="title"><ion-icon name="wifi"></ion-icon> Wi-Fi</span>
+                    <span class="action">
+                        <input type="checkbox">
+                        <i></i>
+                    </span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <span class="title"><ion-icon name="bluetooth"></ion-icon> Bluetooth</span>
+                    <span class="action">
+                        <input type="checkbox">
+                        <i></i>
+                    </span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <span class="title"><ion-icon name="airplane"></ion-icon> Airplane Mode</span>
+                    <span class="action">
+                        <input type="checkbox">
+                        <i></i>
+                    </span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <span class="title"><ion-icon name="location"></ion-icon>  Location</span>
+                    <span class="action">
+                        <input type="checkbox">
+                        <i></i>
+                    </span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <span class="title"><ion-icon name="moon"></ion-icon> Dark Mode</span>
+                    <span class="action">
+                        <input type="checkbox" id="dark">
+                        <i></i>
+                    </span>
+                </label>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const body = document.querySelector("body")
+        const dark = document.querySelector("#dark")
+
+        dark.onclick = () => {
+            if (dark.checked) {
+                body.classList.add("dark_mode")
+            } else{
+                body.classList.remove("dark_mode")
+            }
+        }
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
