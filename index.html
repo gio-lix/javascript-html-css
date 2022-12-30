@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Side bar Menu</title>
+</head>
+<body>
+<div class="navigate">
+    <ul>
+        <li>
+            <a href="#">
+                    <span class="icon">
+                     <i class="material-icons">
+                         code
+                     </i>
+                    </span>
+                <span class="title">Brand name</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon">
+                    <i class="material-icons">
+                     person_outline
+                    </i>
+                </span>
+                <span class="title">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon">
+                    <i class="material-icons">
+                        accessibility_new
+                    </i>
+                </span>
+                <span class="title">Customers</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon">
+                    <i class="material-icons">
+                         mail
+                    </i>
+                </span>
+                <span class="title">Messages</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon">
+                     <i class="material-icons">
+                       help
+                    </i>
+                </span>
+                <span class="title">Help</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon">
+                   <i class="material-icons">
+                        settings
+                    </i>
+                </span>
+                <span class="title">Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon">
+                    <i class="material-icons">
+                        logout
+                    </i>
+                </span>
+                <span class="title">Sign Out</span>
+            </a>
+        </li>
+    </ul>
+    <div class="toggle"></div>
+</div>
+
+<script>
+    const toggle = document.querySelector(".toggle")
+    const navigate = document.querySelector(".navigate")
+
+    toggle.onclick = () => {
+        navigate.classList.toggle("active")
+    }
+</script>
+</body>
+</html>

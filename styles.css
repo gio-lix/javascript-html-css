@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(54deg, #9e9eef, #b5cc91);
+}
+
+.navigate {
+    position: fixed;
+    inset: 20px;
+    width: 80px;
+    background: #96afa6;
+    border-left: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 15px 15px 25px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: .4s;
+}
+.navigate.active {
+    width: 400px;
+}
+
+.toggle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.06);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid white;
+}
+
+.toggle::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background: #ff0000;
+    transform: translateY(-5px);
+    transition: .5s;
+}
+
+
+.toggle::after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background: #ff0000;
+    transform: translateY(5px);
+    transition: .5s;
+}
+
+.navigate.active .toggle::before {
+    transform: translateY(0px) rotate(-45deg);
+}
+.navigate.active .toggle::after {
+    transform: translateY(0px) rotate(45deg);
+}
+
+
+.navigate ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+.navigate ul li:nth-child(1) {
+    top: 20px;
+    margin-bottom: 40px;
+}
+
+.navigate ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+
+}
+
+.navigate ul li a {
+    position: relative;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 10px;
+    transition: .1s;
+
+}
+
+
+.navigate ul li:hover:not(:first-child) a  {
+    background:  #fff;
+    color: #564981;
+    width: 100%;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.navigate ul li:hover:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    border-top-right-radius: 50%;
+    transform: rotate(-180deg);
+    box-shadow: 7px 0 0 0 #fff;
+
+}
+
+
+
+.navigate ul li:hover:not(:first-child)::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    border-bottom-right-radius: 50%;
+    transform: rotate(-180deg);
+    box-shadow: 7px 0 0 0 #fff;
+
+
+
+}
+
+.navigate ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+
+}
+.navigate ul li a .icon i {
+    font-size: 1.75rem;
+}
+.navigate ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    letter-spacing: .1rem;
+    text-align: start;
+    white-space: nowrap;
+    transition: .2s;
+
+
+}
+.navigate ul li:hover a .title {
+    transition-delay: .1s;
+}
