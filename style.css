@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    background: linear-gradient(200deg, #6761c2, #75638f);
+    font-family: "Lato", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    background: linear-gradient(rgba(57, 53, 98, 0.31), rgba(148, 148, 175, 0.2));
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 1000px;
+    text-align: center;
+    border: 1px solid #c0c0bf;
+}
+
+.container h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.container p {
+    color: white;
+    opacity: .8;
+}
+
+.container small {
+    color: #d3d1d1;
+}
+
+.container small strong {
+    color: greenyellow;
+}
+
+.container .code-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.container .code-container .code {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    border: 1px solid #eee;
+    font-size: 30px;
+    width: 75px;
+    height: 80px;
+    margin: 10px;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+    }
+
+    .code-container {
+        flex-wrap: wrap;
+    }
+
+    .code-container .code {
+        font-size: 1.5rem;
+        height: 50px !important;
+        width: 50px !important;
+        max-width: 50px;
+        font-weight: bold;
+    }
+}
+
+.container .code-container .code::-webkit-outer-spin-button,
+.container .code-container .code::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.container .code-container .code:valid {
+    border: 1px solid #9861c2;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.container .btn {
+    max-width: 400px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    margin: 0px 0px 20px 0px;
+    padding: 0.75rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container .btn-primary {
+    color: white;
+    background: #9861c2;
+    border-color: #9861c2;
+}
+
